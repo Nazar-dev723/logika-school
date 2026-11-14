@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate our service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="b rating-page">
+
+    <header>
+        <h1 class="a">Оцініть сервіс нашої доставки!</h1>
+    </header>
+
+    <main class="a">
+        <div class="stars">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+        </div>
+    </main>
+
+    <button id="send">Відправити</button>
+
+    <script>
+      let rating = 0;
+
+const stars = document.querySelectorAll(".stars span");
+
+stars.forEach(star => {
+    star.addEventListener("click", function() {
+        rating = Number(this.dataset.value);
+
+        stars.forEach(item => {
+            if (Number(item.dataset.value) <= rating) {
+                item.classList.add("active");
+            } else {
+                item.classList.remove("active");
+            }
+        });
+    });
+});
+ document.getElementById("send").addEventListener("click", function() {
+            if (rating === 0) {
+                alert("Будь ласка, оберіть оцінку!");
+            } else {
+                alert("Дякуємо за оцінку: " + rating + " з 5!");
+            }
+        });
+    </script>
+
+</body>
+</html>

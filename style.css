@@ -1,0 +1,361 @@
+
+/* =========================
+   СПІЛЬНІ НАЛАШТУВАННЯ
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(253, 233, 209);
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   ПЕРША СТОРІНКА - ОЦІНКА
+========================= */
+
+.rating-page {
+    min-height: 100vh;
+    position: relative;
+}
+
+.rating-page.b::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/зображення_viber_2026-11-14_17-54-07-123.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.rating-page .a {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-page header {
+    text-align: center;
+    padding: 30px;
+}
+
+.rating-page .stars {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.rating-page .stars span {
+    font-size: 50px;
+    color: gray;
+    cursor: pointer;
+}
+
+.rating-page .stars span:hover {
+    color: yellow;
+}
+
+.rating-page .stars span.active {
+    color: yellow;
+}
+
+.rating-page button {
+    padding: 20px 50px;
+    background: greenyellow;
+    font-size: 25px;
+    border: 5px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+
+    display: block;
+    margin: 50px auto;
+}
+
+.rating-page button:hover {
+    background: yellow;
+}
+
+/* =========================
+   ДРУГА СТОРІНКА - ТОВАРИ
+========================= */
+
+.shop-page main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.shop-page main div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 290px;
+    min-height: 380px;
+    margin-bottom: 20px;
+}
+
+.shop-page img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.shop-page p {
+    font-size: 22px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.shop-page .s {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.shop-page .s:hover {
+    background-color: #218838;
+}
+
+/* =========================
+   АДАПТАЦІЯ ДЛЯ ТЕЛЕФОНІВ
+========================= */
+
+@media (max-width: 600px) {
+    .rating-page .stars span {
+        font-size: 40px;
+    }
+
+    .shop-page main {
+        flex-direction: column;
+    }
+}
+.mak {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+   
+}
+.main-page {
+    
+   
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.main-page header {
+   padding-top: 20px;
+   
+   width: 100%;
+   z-index: -1;
+   text-align: center;
+}
+.tysm{
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 40%;
+    padding-bottom: 20px;
+}
+form button {
+   
+    font-size: 25px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 20px 50px;
+}
+@media screen and (min-width: 1025px) {
+
+    .rating-page .stars span {
+        font-size: 50px;
+    }
+
+    .shop-page main {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .shop-page main div {
+        width: 290px;
+    }
+
+    .shop-page img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .tysm {
+        font-size: 36px;
+    }
+
+    input {
+        width: 40%;
+    }
+
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .rating-page .stars span {
+        font-size: 42px;
+    }
+
+    .rating-page .a {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .rating-page button {
+        font-size: 21px;
+        padding: 15px 35px;
+    }
+
+    .shop-page main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .shop-page main div {
+        width: 260px;
+        min-height: 350px;
+    }
+
+    .shop-page img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .shop-page p {
+        font-size: 19px;
+    }
+
+    .tysm {
+        font-size: 30px;
+    }
+
+    input {
+        width: 65%;
+    }
+
+    form button {
+        font-size: 21px;
+        padding: 16px 35px;
+    }
+
+}
+@media screen and (max-width: 600px) {
+
+    .rating-page .stars {
+        gap: 8px;
+    }
+
+    .rating-page .stars span {
+        font-size: 35px;
+    }
+
+    .rating-page .a {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rating-page header {
+        padding: 15px;
+    }
+
+    .rating-page button {
+        font-size: 18px;
+        padding: 12px 25px;
+        margin: 25px auto;
+    }
+
+    .shop-page main {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .shop-page main div {
+        width: 90%;
+        max-width: 320px;
+        min-height: 300px;
+    }
+
+    .shop-page img {
+        width: 100%;
+        max-width: 250px;
+        height: 200px;
+    }
+
+    .shop-page p {
+        font-size: 18px;
+    }
+
+    .shop-page .s {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .mak {
+        margin: 5px;
+        padding: 8px 12px;
+    }
+
+    .tysm {
+        font-size: 25px;
+    }
+
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    form button {
+        font-size: 18px;
+        padding: 14px 30px;
+    }
+
+}
